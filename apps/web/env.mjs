@@ -35,6 +35,8 @@ export const env = createEnv({
       .string()
       .optional()
       .transform((value) => value?.split(",")),
+    FASTMAIL_SESSION_PROVIDER: z.string().optional(),
+    FASTMAIL_TOKEN: z.string().optional(),
   },
   client: {
     NEXT_PUBLIC_LEMON_STORE_ID: z.string().nullish().default("inboxzero"),
